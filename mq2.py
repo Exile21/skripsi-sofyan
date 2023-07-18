@@ -73,11 +73,3 @@ class MQ():
 
     def MQGetPercentage(self, rs_ro_ratio, pcurve):
         return math.pow(10, (((math.log(rs_ro_ratio) - pcurve[1]) / pcurve[2]) + pcurve[0]))
-
-mq = MQ()
-while True:
-    gas_percentage = mq.MQPercentage()
-    print("MQ-2 Gas Percentage (LPG):", gas_percentage["GAS_LPG"])
-    print("MQ-2 Gas Percentage (CO):", gas_percentage["CO"])
-    print("MQ-2 Gas Percentage (Smoke):", gas_percentage["SMOKE"])
-    time.sleep(1)

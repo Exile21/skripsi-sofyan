@@ -69,10 +69,3 @@ class MQ():
 
     def MQGetPercentage(self, rs_ro_ratio, pcurve):
         return math.pow(10, (((math.log(rs_ro_ratio) - pcurve[1]) / pcurve[2]) + pcurve[0]))
-
-mq = MQ(analogPin=2)
-while True:
-    gas_percentage = mq.MQPercentage()
-    print("MQ-4 Gas Percentage (Methane):", gas_percentage["METHANE"])
-    print("MQ-4 Gas Percentage (CNG):", gas_percentage["CNG"])
-    time.sleep(1)

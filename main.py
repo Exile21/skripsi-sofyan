@@ -1,49 +1,21 @@
+# Import the functions from mq2.py, mq4.py, and mq5.py
+from mq2 import MQ as mq2
+from mq4 import MQ as mq4
+from mq9 import MQ as mq9
 import time
-import board
-import adafruit_character_lcd.character_lcd_i2c as character_lcd
 
-# Initialize the LCD object
-lcd_columns = 16
-lcd_rows = 2
-i2c = board.I2C()
-lcd = character_lcd.Character_LCD_I2C(i2c, lcd_columns, lcd_rows)
-
-# Clear the LCD display
-lcd.clear()
-
-# Display a message
-lcd.message = "Hello, world!"
-
-# Wait for 2 seconds
-time.sleep(2)
-
-# Clear the LCD display
-lcd.clear()
-
-# Display a custom message
-lcd.message = "I2C LCD\nTest"
-
-# Wait for 2 seconds
-time.sleep(2)
-
-# Clear the LCD display
-lcd.clear()
-
-# Display scrolling text
-text = "Scrolling text..."
+mq2 = mq2(analogPin=0)
+mq4 = mq4(analogPin=2)
+mq9 = mq9(analogPin=1)
 while True:
-    lcd.message = text
-    # Scroll to the left
-    time.sleep(0.5)
-    for _ in range(len(text) - lcd_columns + 1):
-        time.sleep(0.5)
-        lcd.move_left()
-    # Scroll to the right
-    for _ in range(len(text) - lcd_columns + 1):
-        time.sleep(0.5)
-        lcd.move_right()
-
-# Cleanup GPIO resources if needed
-# lcd.clear()
-# lcd.backlight = False
-# lcd.close()
+    gas_percentage = mq2.MQPercentage()
+    print("MQ-2 Gas Percentage (LPG):", gas_percentage["GAS_LPG"])
+    print("MQ-2 Gas Percentage (CO):", gas_percentage["CO"])
+    print("MQ-2 Gas Percentage (Smoke):", gas_percentage["SMOKE"])
+    gas_percentage = mq4.MQPercentage()
+    print("MQ-4 Gas Percentage (Methane):", gas_percentage["METHANE"])
+    print("MQ-4 Gas Percentage (CNG):", gas_percentage["CNG"])
+    gas_percentage = mq9.MQPercentage()
+    print("MQ-9 Gas Percentage (CO):", gas_percentage["CO"])
+    print("MQ-9 Gas Percentage (Flammable):", gas_percentage["FLAMMABLE"])
+    time.sleep(1)
