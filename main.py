@@ -3,6 +3,8 @@ from mq2 import MQ as mq2
 from mq4 import MQ as mq4
 from mq9 import MQ as mq9
 import time
+from sklearn.neural_network import RBFRegressor
+import numpy as np
 
 mq2 = mq2(analogPin=0)
 mq4 = mq4(analogPin=2)

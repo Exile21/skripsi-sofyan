@@ -27,9 +27,9 @@ class MQ():
         self.Ro = Ro
         self.MQ_PIN = analogPin
 
-        print("Calibrating...")
+        print("Calibrating MQ-2...")
         self.Ro = self.MQCalibration(self.MQ_PIN)
-        print("Calibration is done...\n")
+        print("Calibration MQ-2 is done...\n")
         print("Ro = %f kohm" % self.Ro)
 
     def MQPercentage(self):
