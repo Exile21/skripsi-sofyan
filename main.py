@@ -25,20 +25,20 @@ mq9 = mq9(analogPin=1)
 
 try:
     while True:
-        humidity, temperature = Adafruit_DHT.read_retry(sensor, dht_pin)
+        # humidity, temperature = Adafruit_DHT.read_retry(sensor, dht_pin)
         gas_percentage_mq9 = mq9.MQPercentage()
         gas_percentage_mq4 = mq4.MQPercentage()
         gas_percentage_mq2 = mq2.MQPercentage()
         
-        if GPIO.input(flame_pin) == GPIO.LOW:
-            print('Fire detected')
-        else:
-            print('No fire detected')
+        # if GPIO.input(flame_pin) == GPIO.LOW:
+        #     print('Fire detected')
+        # else:
+        #     print('No fire detected')
         
-        if humidity is not None and temperature is not None:
-            print(f'Temperature: {temperature}°C, Humidity: {humidity}%')
-        else:
-            print('Failed to retrieve data from humidity sensor')
+        # if humidity is not None and temperature is not None:
+        #     print(f'Temperature: {temperature}°C, Humidity: {humidity}%')
+        # else:
+        #     print('Failed to retrieve data from humidity sensor')
             
         print("MQ-2 Gas Percentage (LPG):", gas_percentage_mq2["GAS_LPG"])
         print("MQ-2 Gas Percentage (CO):", gas_percentage_mq2["CO"])
