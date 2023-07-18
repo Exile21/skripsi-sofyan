@@ -1,6 +1,15 @@
+import smbus
 import time
 import math
-from ADC0832 import ADC0832
+
+pcf8591_address = 0x48
+bus = smbus.SMBus(1)
+
+def read_analog(adc_channel):
+    bus.write_byte(pcf8591_address, adc_channel)
+    bus.read_byte(pcf8591_address)  # dummy read to start conversion
+    analog_value = bus.read_byte(pcf8591_address)
+    return analog_value
 
 class MQ():
     MQ_PIN = 0
@@ -17,10 +26,6 @@ class MQ():
     def __init__(self, Ro=10, analogPin=0):
         self.Ro = Ro
         self.MQ_PIN = analogPin
-        self.adc = ADC0832()
-        self.LPGCurve = [2.3, 0.21, -0.47]
-        self.COCurve = [2.3, 0.72, -0.34]
-        self.SmokeCurve = [2.3, 0.53, -0.44]
 
         print("Calibrating...")
         self.Ro = self.MQCalibration(self.MQ_PIN)
@@ -41,7 +46,7 @@ class MQ():
     def MQCalibration(self, mq_pin):
         val = 0.0
         for i in range(self.CALIBRATION_SAMPLE_TIMES):
-            val += self.MQResistanceCalculation(self.adc.analogRead(mq_pin))
+            val += self.MQResistanceCalculation(read_analog(mq_pin))
             time.sleep(self.CALIBRATION_SAMPLE_INTERVAL / 1000.0)
 
         val = val / self.CALIBRATION_SAMPLE_TIMES
@@ -51,7 +56,7 @@ class MQ():
     def MQRead(self, mq_pin):
         rs = 0.0
         for i in range(self.READ_SAMPLE_TIMES):
-            rs += self.MQResistanceCalculation(self.adc.analogRead(mq_pin))
+            rs += self.MQResistanceCalculation(read_analog(mq_pin))
             time.sleep(self.READ_SAMPLE_INTERVAL / 1000.0)
 
         rs = rs / self.READ_SAMPLE_TIMES
@@ -59,16 +64,15 @@ class MQ():
 
     def MQGetGasPercentage(self, rs_ro_ratio, gas_id):
         if gas_id == self.GAS_LPG:
-            return self.MQGetPercentage(rs_ro_ratio, self.LPGCurve)
+            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.21, -0.47])
         elif gas_id == self.GAS_CO:
-            return self.MQGetPercentage(rs_ro_ratio, self.COCurve)
+            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.72, -0.34])
         elif gas_id == self.GAS_SMOKE:
-            return self.MQGetPercentage(rs_ro_ratio, self.SmokeCurve)
+            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.53, -0.44])
         return 0
 
     def MQGetPercentage(self, rs_ro_ratio, pcurve):
         return math.pow(10, (((math.log(rs_ro_ratio) - pcurve[1]) / pcurve[2]) + pcurve[0]))
-
 
 mq = MQ()
 while True:
