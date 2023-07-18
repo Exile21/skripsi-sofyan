@@ -4,7 +4,6 @@ from mq4 import MQ as mq4
 from mq9 import MQ as mq9
 import time
 from sklearn.neural_network import RBFRegressor
-import numpy as np
 from Adafruit_DHT import DHT11, read_retry
 
 # DHT11
@@ -33,7 +32,8 @@ try:
         print("MQ-4 Gas Percentage (CNG):", gas_percentage_mq4["CNG"])
         print("MQ-9 Gas Percentage (CO):", gas_percentage_mq9["CO"])
         print("MQ-9 Gas Percentage (Flammable):", gas_percentage_mq9["FLAMMABLE"])
-        time.sleep(1)
+        
+        time.sleep(2)
 except KeyboardInterrupt:
     print("Program stopped by user")
 finally:
