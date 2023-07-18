@@ -2,16 +2,16 @@ import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BCM)
-ir_pin = 5
+flame_pin = 5
 
-GPIO.setup(ir_pin, GPIO.IN)
+GPIO.setup(flame_pin, GPIO.IN)
 
 try:
     while True:
-        if GPIO.input(ir_pin) == GPIO.HIGH:
-            print('Obstacle detected')
+        if GPIO.input(flame_pin) == GPIO.LOW:
+            print('Fire detected')
         else:
-            print('Obstacle not detected')
+            print('No fire detected')
             
         time.sleep(1)
 except KeyboardInterrupt:
