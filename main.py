@@ -3,7 +3,6 @@ from mq2 import MQ as mq2
 from mq4 import MQ as mq4
 from mq9 import MQ as mq9
 import time
-from sklearn.neural_network import RBFRegressor
 from Adafruit_DHT import DHT11, read_retry
 
 # DHT11
