@@ -62,7 +62,7 @@ class MQ():
 
     def MQGetGasPercentage(self, rs_ro_ratio, gas_id):
         if gas_id == self.GAS_CO:
-            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.23, 0.47])
+            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.23, -0.47])
             # ( Log10(0.8) -  log10(1.7) ) / ( log10(1000) - log10(200) )
             # two points are taken from the curve. 
             # with these two points, a line is formed which is "approximately equivalent"
