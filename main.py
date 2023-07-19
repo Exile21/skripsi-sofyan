@@ -35,11 +35,7 @@ try:
         print(log_msg)
         logging.info(log_msg)
 
-        log_msg = "Average LPG: " + str((gas_percentage_mq2["GAS_LPG"] + gas_percentage_mq4["LPG"]) / 2)
-        print(log_msg)
-        logging.info(log_msg)
-
-        log_msg = "Average CO: " + str((gas_percentage_mq2["CO"] + gas_percentage_mq9["CO"]) / 2)
+        log_msg = "Average CO: " + str(gas_percentage_mq2["CO"]) + str(gas_percentage_mq9["CO"])
         print(log_msg)
         logging.info(log_msg)
 
