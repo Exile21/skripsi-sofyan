@@ -65,10 +65,22 @@ class MQ():
     def MQGetGasPercentage(self, rs_ro_ratio, gas_id):
         if gas_id == self.GAS_LPG:
             return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.21, -0.47])
+            # two points are taken from the curve. 
+            # with these two points, a line is formed which is "approximately equivalent"
+            # to the original curve. 
+            # data format:{ x, y, slope}; point1: (lg200, 0.21), point2: (lg10000, -0.59) 
         elif gas_id == self.GAS_CO:
             return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.72, -0.34])
+            # two points are taken from the curve. 
+            # with these two points, a line is formed which is "approximately equivalent" 
+            # to the original curve.
+            # data format:[ x, y, slope]; point1: (lg200, 0.72), point2: (lg10000,  0.15)
         elif gas_id == self.GAS_SMOKE:
             return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.53, -0.44])
+            # two points are taken from the curve. 
+            # with these two points, a line is formed which is "approximately equivalent" 
+            # to the original curve.
+            # data format:[ x, y, slope]; point1: (lg200, 0.53), point2: (lg10000,  -0.22)  
         return 0
 
     def MQGetPercentage(self, rs_ro_ratio, pcurve):

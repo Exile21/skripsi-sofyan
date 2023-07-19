@@ -24,13 +24,10 @@ try:
         else:
             print('Failed to retrieve data from humidity sensor')
         
-        print("MQ-2 Gas Percentage (LPG):", gas_percentage_mq2["GAS_LPG"])
-        print("MQ-2 Gas Percentage (CO):", gas_percentage_mq2["CO"])
-        print("MQ-2 Gas Percentage (Smoke):", gas_percentage_mq2["SMOKE"])
-        print("MQ-4 Gas Percentage (Methane):", gas_percentage_mq4["METHANE"])
-        print("MQ-4 Gas Percentage (CNG):", gas_percentage_mq4["CNG"])
-        print("MQ-9 Gas Percentage (CO):", gas_percentage_mq9["CO"])
-        print("MQ-9 Gas Percentage (Flammable):", gas_percentage_mq9["FLAMMABLE"])
+        print("MQ-2 Gas Percentage (CO2):", gas_percentage_mq2["SMOKE"])
+        print("Average LPG", (gas_percentage_mq2["GAS_LPG"] + gas_percentage_mq4["LPG"]) / 2)
+        print("Average CO", (gas_percentage_mq2["CO"] + gas_percentage_mq9["CO"]) / 2)
+        print("Averate Methane", (gas_percentage_mq4["METHANE"] + gas_percentage_mq9["METHANE"]) / 2)
         
         time.sleep(2)
 except KeyboardInterrupt:

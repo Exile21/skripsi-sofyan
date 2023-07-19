@@ -20,7 +20,7 @@ class MQ():
     READ_SAMPLE_INTERVAL = 50
     READ_SAMPLE_TIMES = 5
     GAS_METHANE = 0
-    GAS_CNG = 1
+    GAS_LPG = 1
 
     def __init__(self, Ro=10, analogPin=0):
         self.Ro = Ro
@@ -35,7 +35,7 @@ class MQ():
         val = {}
         read = self.MQRead(self.MQ_PIN)
         val["METHANE"] = self.MQGetGasPercentage(read / self.Ro, self.GAS_METHANE)
-        val["CNG"] = self.MQGetGasPercentage(read / self.Ro, self.GAS_CNG)
+        val["LPG"] = self.MQGetGasPercentage(read / self.Ro, self.GAS_LPG)
         return val
 
     def MQResistanceCalculation(self, raw_adc):
@@ -62,9 +62,17 @@ class MQ():
 
     def MQGetGasPercentage(self, rs_ro_ratio, gas_id):
         if gas_id == self.GAS_METHANE:
-            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.21, -0.47])
-        elif gas_id == self.GAS_CNG:
-            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.72, -0.34])
+            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.21, -0.35]) 
+            # two points are taken from the curve. 
+            # with these two points, a line is formed which is "approximately equivalent"
+            # to the original curve. 
+            # data format:{ x, y, slope}; point1: (lg200, 0.21), point2: (lg10000, -0.59) 
+        elif gas_id == self.GAS_LPG:
+            return self.MQGetPercentage(rs_ro_ratio, [2.3, 0.72, 0.85])
+            # two points are taken from the curve. 
+            # with these two points, a line is formed which is "approximately equivalent"
+            # to the original curve. 
+            # data format:{ x, y, slope}; point1: (lg200, 0.21), point2: (lg10000, -0.59) 
         return 0
 
     def MQGetPercentage(self, rs_ro_ratio, pcurve):
