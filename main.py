@@ -6,7 +6,7 @@ import time
 from Adafruit_DHT import DHT11, read_retry
 
 # Configure logging
-logging.basicConfig(filename='sensor_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(filename='sensor_log_methane.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # DHT11
 sensor = DHT11
