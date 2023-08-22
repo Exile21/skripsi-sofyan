@@ -1,0 +1,764 @@
+ofyan@raspberrypi:~/skripsi-sofyan $ /bin/python3 /home/sofyan/skripsi-sofyan/main.py
+Calibrating MQ-2...
+Calibration MQ-2 is done...
+
+Ro = 3.556555 kohm
+Calibrating MQ-4...
+Calibration MQ-4 is done...
+
+Ro = 3.556555 kohm
+Calibrating MQ-9...
+Calibration MQ-9 is done...
+
+Ro = 3.556555 kohm
+Temperature: 38.0°C
+Humidity: 37.0%
+MQ-2 Gas Percentage (CO2): 0.020434596130316608
+Average CO: 0.0067053600633705255
+Average Methane: 0.00015697703046453737
+Temperature: 38.0°C
+Humidity: 37.0%
+MQ-2 Gas Percentage (CO2): 0.020434596130316608
+Average CO: 0.0067053600633705255
+Average Methane: 0.00015697703046453737
+Temperature: 38.0°C
+Humidity: 37.0%
+MQ-2 Gas Percentage (CO2): 0.020434596130316608
+Average CO: 0.0067053600633705255
+Average Methane: 0.00015697703046453737
+Temperature: 38.0°C
+Humidity: 37.0%
+MQ-2 Gas Percentage (CO2): 0.020434596130316608
+Average CO: 0.0067053600633705255
+Average Methane: 0.00015697703046453737
+^CProgram stopped by the user
+Program terminated
+sofyan@raspberrypi:~/skripsi-sofyan $ /bin/python3 /home/sofyan/skripsi-sofyan/main.py
+Calibrating MQ-2...
+Calibration MQ-2 is done...
+
+Ro = 3.556555 kohm
+Calibrating MQ-4...
+Calibration MQ-4 is done...
+
+Ro = 3.556555 kohm
+Calibrating MQ-9...
+Calibration MQ-9 is done...
+
+Ro = 2.920372 kohm
+Temperature: 38.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 38.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 38.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 35.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 36.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 36.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 37.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 39.0°C
+Humidity: 37.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Failed to retrieve data from the humidity sensor
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 24.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 21.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 18.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 16.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 15.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 14.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 10.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 9.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 8.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 9.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 8.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 0.2688614050653988
+Average CO: 0.08762465410752897
+Average Methane: 0.003948707933049576
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 0.6266440786069568
+Average CO: 0.2812050071840827
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 7.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 6.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.201774063599818
+Average CO: 0.5566789761986113
+Average Methane: 0.026209067606453435
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.307577723390363
+Average CO: 0.6184881565763743
+Average Methane: 0.02916434277399036
+Temperature: 60.0°C
+Humidity: 5.0%
+MQ-2 Gas Percentage (CO2): 1.307577723390363
+Average CO: 0.6184881565763743
+Average Methane: 0.02916434277399036
+Temperature: 60.0°C
+Humidity: 4.0%
+MQ-2 Gas Percentage (CO2): 1.307577723390363
+Average CO: 0.6184881565763743
+Average Methane: 0.02916434277399036
+Temperature: 60.0°C
+Humidity: 4.0%
+MQ-2 Gas Percentage (CO2): 1.307577723390363
+Average CO: 0.6392067767996488
+Average Methane: 0.03326247816904237
+Temperature: 60.0°C
+Humidity: 4.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 4.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 4.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 4.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 4.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 4.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+Temperature: 60.0°C
+Humidity: 3.0%
+MQ-2 Gas Percentage (CO2): 1.6772965200213883
+Average CO: 0.8443620531007789
+Average Methane: 0.03998038332501727
+^CProgram stopped by the user
+Program terminated
