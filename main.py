@@ -23,9 +23,12 @@ try:
 
         humidity, temperature = read_retry(sensor, dht_pin)
         if humidity is not None and temperature is not None:
-            log_msg = f'Temperature: {temperature}°C, Humidity: {humidity}%'
-            print(log_msg)
-            logging.info(log_msg)
+            log_msg1 = f'Temperature: {temperature}°C'
+            print(log_msg1)
+            logging.info(log_msg1)
+            log_msg2 = f'Humidity: {humidity}%'
+            print(log_msg2)
+            logging.info(log_msg2)
         else:
             log_msg = 'Failed to retrieve data from the humidity sensor'
             print(log_msg)
