@@ -348,6 +348,7 @@ data = [
     },{ 
         'temperature': 29.0,
         'humidity': 71.0,
+        a
         'gasPercentage': 0.05592142728955934,
         'averageCO': 0.013767248273482555,
         'averageMethane': 0.00018656185930989146,
