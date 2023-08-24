@@ -1,12 +1,16 @@
-import logging
 from mq2 import MQ as mq2
 from mq4 import MQ as mq4
 from mq9 import MQ as mq9
 import time
 from Adafruit_DHT import DHT11, read_retry
-
-# Configure logging
-logging.basicConfig(filename='fixed_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
+from keras.models import load_model
+from custom_layers import RBFLayer
+import numpy as np
+from sklearn.preprocessing import LabelEncoder
+from keras.utils import to_categorical
+import csv
+import pickle
+import time
 
 # DHT11
 sensor = DHT11
@@ -15,41 +19,56 @@ dht_pin = 18
 mq2 = mq2(analogPin=0)
 mq4 = mq4(analogPin=2)
 mq9 = mq9(analogPin=1)
+
+# Load the saved model
+saved_model = load_model("rbf_classification_model.h5", custom_objects={"RBFLayer": RBFLayer})
+
+# Import the scaler from pickle
+with open('scaler.pkl', 'rb') as f:
+    scaler = pickle.load(f)
+
+# Import the labels from csv
+with open('target_names.csv', newline='') as csvfile:
+    reader = csv.reader(csvfile)
+    labels = list(reader)[0]
+
+# Encode labels into numerical values
+label_encoder = LabelEncoder()
+encoded_labels = label_encoder.fit_transform(labels)
+encoded_labels = to_categorical(encoded_labels)
+
 try:
     while True:
         gas_percentage_mq2 = mq2.MQPercentage()
         gas_percentage_mq4 = mq4.MQPercentage()
         gas_percentage_mq9 = mq9.MQPercentage()
 
+        average_co = (gas_percentage_mq2["CO"] + gas_percentage_mq9["CO"]) / 2
+        average_methane = (gas_percentage_mq4["METHANE"] + gas_percentage_mq9["METHANE"]) / 2
+
         humidity, temperature = read_retry(sensor, dht_pin)
-        if humidity is not None and temperature is not None:
+        if humidity is None or temperature is None:
             log_msg1 = f'Temperature: {temperature}°C'
             print(log_msg1)
-            logging.info(log_msg1)
             log_msg2 = f'Humidity: {humidity}%'
             print(log_msg2)
-            logging.info(log_msg2)
         else:
             log_msg = 'Failed to retrieve data from the humidity sensor'
             print(log_msg)
-            logging.error(log_msg)
 
-        log_msg = "MQ-2 Gas Percentage (CO2): " + str(gas_percentage_mq2["SMOKE"])
-        print(log_msg)
-        logging.info(log_msg)
+        # Preprocess new data using the same scaler
+        new_data = np.array([[temperature, humidity, gas_percentage_mq2["SMOKE"], average_co, average_methane]])
+        scaled_new_data = scaler.transform(new_data)
 
-        log_msg = "Average CO: " + str((gas_percentage_mq2["CO"] + gas_percentage_mq9["CO"]) / 2)
-        print(log_msg)
-        logging.info(log_msg)
+        # Make predictions
+        predictions = saved_model.predict(scaled_new_data)
+        predicted_class_index = np.argmax(predictions, axis=1)
+        predicted_class = label_encoder.inverse_transform(predicted_class_index)
 
-        log_msg = "Average Methane: " + str((gas_percentage_mq4["METHANE"] + gas_percentage_mq9["METHANE"]) / 2)
-        print(log_msg)
-        logging.info(log_msg)
+        print("Predicted class:", predicted_class)
 
         time.sleep(2)
 except KeyboardInterrupt:
     print("Program stopped by the user")
-    logging.info("Program stopped by the user")
 finally:
     print("Program terminated")
-    logging.info("Program terminated")

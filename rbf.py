@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
 from custom_layers import RBFLayer
+import pickle
 
 # template data
 # data = [
@@ -89,7 +90,7 @@ learning_rates = [0.001, 0.01, 0.1, 0.2, 0.3]
 model.compile(loss=MeanSquaredError(), optimizer=RMSprop(learning_rate=learning_rates[0]), metrics=['accuracy'])
 
 # Train the model
-history = model.fit(X_train, y_train, epochs=100, batch_size=8, verbose=2, validation_data=(X_test, y_test))
+history = model.fit(X_train, y_train, epochs=150, batch_size=8, verbose=2, validation_data=(X_test, y_test))
 
 # Plot training history
 plt.figure(figsize=(12, 6))
@@ -125,8 +126,14 @@ predicted_labels = label_encoder.inverse_transform(predicted_labels)
 print("Predicted data:", X_test)
 print("Predicted labels:", predicted_labels)
 
-# Classification report
+# Save the target names to csv
 target_names = label_encoder.classes_
+print("Target names:", target_names)
+with open('target_names.csv', 'w', newline='') as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(target_names)
+
+# Classification report
 classification_report_str = classification_report(
     np.argmax(y_test, axis=1), 
     np.argmax(predictions, axis=1), 
@@ -154,6 +161,10 @@ new_data = np.array([[3.200e+01, 4.800e+01, 2.043e-02, 6.710e-03, 1.600e-04]])
 # Load the same scaler used for training
 scaler = StandardScaler()
 scaler.fit(X_train)  # Fit the scaler on the training data
+
+# Save trained scaler to pickle
+with open('scaler.pkl', 'wb') as f:
+    pickle.dump(scaler, f)
 
 # Preprocess new data using the same scaler
 scaled_new_data = scaler.transform(new_data)
