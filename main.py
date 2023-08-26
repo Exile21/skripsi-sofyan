@@ -3,7 +3,7 @@ from mq4 import MQ as mq4
 from mq9 import MQ as mq9
 import time
 from Adafruit_DHT import DHT11, read_retry
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from custom_layers import RBFLayer
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
