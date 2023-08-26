@@ -7,7 +7,7 @@ from keras.models import load_model
 from custom_layers import RBFLayer
 import numpy as np
 from sklearn.preprocessing import LabelEncoder
-from keras.utils import to_categorical
+from tensorflow.keras.utils import to_categorical
 import csv
 import pickle
 import time

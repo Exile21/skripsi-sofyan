@@ -1,5 +1,5 @@
-from keras import backend as K
-from keras.layers import Layer
+from tensorflow.keras import backend as K
+from tensorflow.keras.layers import Layer
 
 # Custom RBF layer
 class RBFLayer(Layer):
