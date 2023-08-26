@@ -92,29 +92,29 @@ model.compile(loss=MeanSquaredError(), optimizer=RMSprop(learning_rate=learning_
 # Train the model
 history = model.fit(X_train, y_train, epochs=150, batch_size=8, verbose=2, validation_data=(X_test, y_test))
 
-# Plot training history
-plt.figure(figsize=(12, 6))
+# # Plot training history
+# plt.figure(figsize=(12, 6))
 
-# Plot training & validation accuracy values
-plt.subplot(1, 2, 1)
-plt.plot(history.history['accuracy'])
-plt.plot(history.history['val_accuracy'])
-plt.title('Model accuracy')
-plt.xlabel('Epoch')
-plt.ylabel('Accuracy')
-plt.legend(['Train', 'Validation'], loc='upper left')
+# # Plot training & validation accuracy values
+# plt.subplot(1, 2, 1)
+# plt.plot(history.history['accuracy'])
+# plt.plot(history.history['val_accuracy'])
+# plt.title('Model accuracy')
+# plt.xlabel('Epoch')
+# plt.ylabel('Accuracy')
+# plt.legend(['Train', 'Validation'], loc='upper left')
 
-# Plot training & validation loss values
-plt.subplot(1, 2, 2)
-plt.plot(history.history['loss'])
-plt.plot(history.history['val_loss'])
-plt.title('Model loss')
-plt.xlabel('Epoch')
-plt.ylabel('Loss')
-plt.legend(['Train', 'Validation'], loc='upper left')
+# # Plot training & validation loss values
+# plt.subplot(1, 2, 2)
+# plt.plot(history.history['loss'])
+# plt.plot(history.history['val_loss'])
+# plt.title('Model loss')
+# plt.xlabel('Epoch')
+# plt.ylabel('Loss')
+# plt.legend(['Train', 'Validation'], loc='upper left')
 
-plt.tight_layout()
-plt.show()
+# plt.tight_layout()
+# plt.show()
 
 # # Save the trained model
 model.save("rbf_classification_model.h5")
@@ -143,13 +143,13 @@ classification_report_str = classification_report(
 print(classification_report_str)
 
 # Confusion matrix
-confusion = confusion_matrix(np.argmax(y_test, axis=1), np.argmax(predictions, axis=1))
-plt.figure(figsize=(8, 6))
-sns.heatmap(confusion, annot=True, fmt="d", cmap="Blues", xticklabels=target_names, yticklabels=target_names)
-plt.ylabel('Actual Value')
-plt.xlabel('Predicted Value')
-plt.title('Confusion Matrix')
-plt.show()
+# confusion = confusion_matrix(np.argmax(y_test, axis=1), np.argmax(predictions, axis=1))
+# plt.figure(figsize=(8, 6))
+# sns.heatmap(confusion, annot=True, fmt="d", cmap="Blues", xticklabels=target_names, yticklabels=target_names)
+# plt.ylabel('Actual Value')
+# plt.xlabel('Predicted Value')
+# plt.title('Confusion Matrix')
+# plt.show()
 
 # Load the saved model
 from tensorflow.keras.models import load_model
