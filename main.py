@@ -48,13 +48,12 @@ try:
 
         humidity, temperature = read_retry(sensor, dht_pin)
         if humidity is None or temperature is None:
+            print("Failed to retrieve data from DHT11 sensor")
+        else:
             log_msg1 = f'Temperature: {temperature}°C'
             print(log_msg1)
             log_msg2 = f'Humidity: {humidity}%'
             print(log_msg2)
-        else:
-            log_msg = 'Failed to retrieve data from the humidity sensor'
-            print(log_msg)
 
         # Preprocess new data using the same scaler
         new_data = np.array([[temperature, humidity, gas_percentage_mq2["SMOKE"], average_co, average_methane]])
