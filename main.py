@@ -11,6 +11,7 @@ from tensorflow.keras.utils import to_categorical
 import csv
 import pickle
 import time
+import Adafruit_CharLCD as LCD
 
 # DHT11
 sensor = DHT11
@@ -36,6 +37,11 @@ with open('target_names.csv', newline='') as csvfile:
 label_encoder = LabelEncoder()
 encoded_labels = label_encoder.fit_transform(labels)
 encoded_labels = to_categorical(encoded_labels)
+
+# Initialize the LCD screen with I2C backpack module
+lcd_columns = 16
+lcd_rows = 2
+lcd = LCD.Adafruit_CharLCDPlate()
 
 try:
     while True:
@@ -65,6 +71,10 @@ try:
         predicted_class = label_encoder.inverse_transform(predicted_class_index)
 
         print("Predicted class:", predicted_class)
+
+        # Print the predicted class on the LCD screen
+        lcd.clear()
+        lcd.message(f'Predicted class:\n{predicted_class[0]}')
 
         time.sleep(2)
 except KeyboardInterrupt:
