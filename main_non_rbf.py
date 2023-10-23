@@ -11,7 +11,8 @@ from tensorflow.keras.utils import to_categorical
 import csv
 import pickle
 import time
-from lcd import update_lcd
+from lcd import update_lcd_line_2
+import threading  # Import the threading module
 
 # DHT11
 sensor = DHT11
@@ -23,6 +24,23 @@ mq9 = mq9(analogPin=1)
 
 # Load the saved model
 saved_model = load_model("rbf_classification_model.h5", custom_objects={"RBFLayer": RBFLayer})
+
+# Define predicted_class as a global variable
+predicted_class = "N/A"
+
+update_lcd_line_2('Predicted class:')
+
+# Define a function to continuously update the LCD without blocking
+def lcd_update_thread():
+    while True:
+        # Update LCD line 2 with the predicted class
+        update_lcd_line_2(predicted_class)
+        time.sleep(2)  # Sleep for 2 seconds (if you want a delay)
+
+# Start the LCD update thread
+lcd_thread = threading.Thread(target=lcd_update_thread)
+lcd_thread.daemon = True  # Set the thread as a daemon so it will exit when the main program exits
+lcd_thread.start()
 
 try:
     while True:
@@ -48,9 +66,6 @@ try:
             predicted_class = 'normal'
 
         print("Predicted class:", predicted_class)
-
-        # Print the predicted class on the LCD screen
-        update_lcd(f'Predicted class:\n{predicted_class[0]}', '')
 
         time.sleep(2)
 except KeyboardInterrupt:

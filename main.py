@@ -42,6 +42,8 @@ encoded_labels = to_categorical(encoded_labels)
 # Define predicted_class as a global variable
 predicted_class = "N/A"
 
+update_lcd_line_2('Predicted class:')
+
 # Define a function to continuously update the LCD without blocking
 def lcd_update_thread():
     while True:
