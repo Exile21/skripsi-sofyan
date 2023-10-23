@@ -13,6 +13,7 @@ import pickle
 import time
 from lcd import update_lcd_line_2
 import threading  # Import the threading module
+import datetime
 
 # DHT11
 sensor = DHT11
@@ -42,7 +43,8 @@ encoded_labels = to_categorical(encoded_labels)
 # Define predicted_class as a global variable
 predicted_class = "N/A"
 
-update_lcd_line_2('Predicted class:')
+# Create a list to store records
+records = []
 
 # Define a function to continuously update the LCD without blocking
 def lcd_update_thread():
@@ -85,8 +87,20 @@ try:
 
         print("Predicted class:", predicted_class)
 
+        # Append the record to the list
+        records.append([predicted_class, temperature, humidity, gas_percentage_mq2["SMOKE"], average_co, average_methane])
+
         time.sleep(2)
 except KeyboardInterrupt:
     print("Program stopped by the user")
 finally:
-    print("Program terminated")
+    # Generate a timestamp for the file name
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    
+    # Save the records to a CSV file with the timestamp
+    file_name = f'sensor_records_{timestamp}.csv'
+    with open(file_name, mode='w', newline='') as csvfile:
+        writer = csv.writer(csvfile)
+        writer.writerow(['Predicted Class', 'Temperature', 'Humidity', 'MQ2 Smoke', 'Average CO', 'Average Methane'])
+        writer.writerows(records)
+    print(f"Program terminated. Records saved to {file_name}")
