@@ -38,7 +38,15 @@ label_encoder = LabelEncoder()
 encoded_labels = label_encoder.fit_transform(labels)
 encoded_labels = to_categorical(encoded_labels)
 
+initial_value = 'normal'
+predicted_value = initial_value
+
 update_lcd_line_1('Predicted class:')
+
+if initial_value != predicted_value:
+    update_lcd_line_2(predicted_value)
+else:
+    update_lcd_line_2('')
 
 try:
     while True:
@@ -70,7 +78,7 @@ try:
         print("Predicted class:", predicted_class)
 
         # Print the predicted class on the LCD screen
-        update_lcd_line_2(f'Predicted class:\n{predicted_class[0]}')
+        predicted_value = predicted_class[0]
 
         time.sleep(2)
 except KeyboardInterrupt:
