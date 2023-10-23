@@ -12,6 +12,7 @@ import csv
 import pickle
 import time
 from lcd import update_lcd_line_1, update_lcd_line_2
+import threading  # Import the threading module
 
 # DHT11
 sensor = DHT11
@@ -38,15 +39,21 @@ label_encoder = LabelEncoder()
 encoded_labels = label_encoder.fit_transform(labels)
 encoded_labels = to_categorical(encoded_labels)
 
-initial_value = 'normal'
-predicted_value = initial_value
+# Define predicted_class as a global variable
+predicted_class = "N/A"
 
 update_lcd_line_1('Predicted class:')
 
-if initial_value != predicted_value:
-    update_lcd_line_2(predicted_value)
-else:
-    update_lcd_line_2('')
+# Define a function to continuously update the LCD without blocking
+def lcd_update_thread():
+    while True:
+        # Update LCD line 2 with the predicted class
+        update_lcd_line_2(f'Predicted class:\n{predicted_class}')
+
+# Start the LCD update thread
+lcd_thread = threading.Thread(target=lcd_update_thread)
+lcd_thread.daemon = True  # Set the thread as a daemon so it will exit when the main program exits
+lcd_thread.start()
 
 try:
     while True:
@@ -73,12 +80,9 @@ try:
         # Make predictions
         predictions = saved_model.predict(scaled_new_data)
         predicted_class_index = np.argmax(predictions, axis=1)
-        predicted_class = label_encoder.inverse_transform(predicted_class_index)
+        predicted_class = label_encoder.inverse_transform(predicted_class_index)[0]
 
         print("Predicted class:", predicted_class)
-
-        # Print the predicted class on the LCD screen
-        predicted_value = predicted_class[0]
 
         time.sleep(2)
 except KeyboardInterrupt:
