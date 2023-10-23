@@ -11,7 +11,7 @@ from tensorflow.keras.utils import to_categorical
 import csv
 import pickle
 import time
-from lcd import update_lcd
+from lcd import update_lcd_line_1, update_lcd_line_2
 
 # DHT11
 sensor = DHT11
@@ -37,6 +37,8 @@ with open('target_names.csv', newline='') as csvfile:
 label_encoder = LabelEncoder()
 encoded_labels = label_encoder.fit_transform(labels)
 encoded_labels = to_categorical(encoded_labels)
+
+update_lcd_line_1('Predicted class:')
 
 try:
     while True:
@@ -68,7 +70,7 @@ try:
         print("Predicted class:", predicted_class)
 
         # Print the predicted class on the LCD screen
-        update_lcd(f'Predicted class:\n{predicted_class[0]}', '')
+        update_lcd_line_2(f'Predicted class:\n{predicted_class[0]}', '')
 
         time.sleep(2)
 except KeyboardInterrupt:
