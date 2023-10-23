@@ -28,7 +28,7 @@ def lcd_init():
     lcd_byte(0x33, LCD_CMD)  # 110011 Initialize
     lcd_byte(0x32, LCD_CMD)  # 110010 Initialize
     lcd_byte(0x06, LCD_CMD)  # 000110 Cursor move direction
-    lcd_byte(0x0C, LCD_CMD)  # 001100 Display On,Cursor Off, Blink Off
+    lcd_byte(0x0C, LCD_CMD)  # 001100 Display On, Cursor Off, Blink Off
     lcd_byte(0x28, LCD_CMD)  # 101000 Data length, number of lines, font size
     lcd_byte(0x01, LCD_CMD)  # 000001 Clear display
     time.sleep(E_DELAY)
@@ -59,9 +59,7 @@ def lcd_toggle_enable(bits):
 
 def lcd_string(message, line):
     # Send string to display
-
     message = message.ljust(LCD_WIDTH, " ")
-
     lcd_byte(line, LCD_CMD)
 
     for i in range(LCD_WIDTH):
@@ -70,9 +68,11 @@ def lcd_string(message, line):
 if __name__ == '__main__':
     try:
         lcd_init()
-        lcd_string("Hello, World!", LCD_LINE_1)
-        lcd_string("Raspberry Pi", LCD_LINE_2)
-        time.sleep(2)
+        while True:
+            lcd_string("Hello, World!", LCD_LINE_1)
+            time.sleep(2)
+            lcd_string("Raspberry Pi", LCD_LINE_2)
+            time.sleep(2)
 
     except KeyboardInterrupt:
         pass
