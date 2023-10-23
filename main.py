@@ -70,7 +70,7 @@ try:
         print("Predicted class:", predicted_class)
 
         # Print the predicted class on the LCD screen
-        update_lcd_line_2(f'Predicted class:\n{predicted_class[0]}', '')
+        update_lcd_line_2(f'Predicted class:\n{predicted_class[0]}')
 
         time.sleep(2)
 except KeyboardInterrupt:
