@@ -41,7 +41,8 @@ encoded_labels = to_categorical(encoded_labels)
 # Initialize the LCD screen with I2C backpack module
 lcd_columns = 16
 lcd_rows = 2
-lcd = LCD.Adafruit_CharLCDPlate()
+lcd_address = 0x27 # Replace with your LCD I2C address
+lcd = LCD.Adafruit_CharLCDPlate(address=lcd_address)
 
 try:
     while True:
