@@ -11,7 +11,7 @@ from tensorflow.keras.utils import to_categorical
 import csv
 import pickle
 import time
-from lcd import update_lcd_line_1, update_lcd_line_2
+from lcd import update_lcd_line_2
 import threading  # Import the threading module
 
 # DHT11
@@ -41,8 +41,6 @@ encoded_labels = to_categorical(encoded_labels)
 
 # Define predicted_class as a global variable
 predicted_class = "N/A"
-
-update_lcd_line_1('Predicted class:')
 
 # Define a function to continuously update the LCD without blocking
 def lcd_update_thread():
