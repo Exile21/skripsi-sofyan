@@ -16,6 +16,10 @@ ENABLE = 0b00000100  # Enable bit
 E_PULSE = 0.0005
 E_DELAY = 0.0005
 
+# LCD line addresses
+LCD_LINE_1 = 0x80  # Line 1 address
+LCD_LINE_2 = 0xC0  # Line 2 address
+
 # Open I2C interface
 bus = smbus.SMBus(1)
 
