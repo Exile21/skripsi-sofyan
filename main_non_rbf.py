@@ -11,7 +11,7 @@ from tensorflow.keras.utils import to_categorical
 import csv
 import pickle
 import time
-import Adafruit_CharLCD as LCD
+from lcd import update_lcd
 
 # DHT11
 sensor = DHT11
@@ -23,12 +23,6 @@ mq9 = mq9(analogPin=1)
 
 # Load the saved model
 saved_model = load_model("rbf_classification_model.h5", custom_objects={"RBFLayer": RBFLayer})
-
-# Initialize the LCD screen with I2C backpack module
-lcd_columns = 16
-lcd_rows = 2
-lcd_address = 0x27 # Replace with your LCD I2C address
-lcd = LCD.Adafruit_CharLCDPlate(address=lcd_address)
 
 try:
     while True:
@@ -56,8 +50,7 @@ try:
         print("Predicted class:", predicted_class)
 
         # Print the predicted class on the LCD screen
-        lcd.clear()
-        lcd.message(f'Predicted class:\n{predicted_class}')
+        update_lcd(f'Predicted class:\n{predicted_class[0]}', '')
 
         time.sleep(2)
 except KeyboardInterrupt:

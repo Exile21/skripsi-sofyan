@@ -65,17 +65,16 @@ def lcd_string(message, line):
     for i in range(LCD_WIDTH):
         lcd_byte(ord(message[i]), LCD_CHR)
 
-if __name__ == '__main__':
+def update_lcd(message_line_1, message_line_2):
     try:
         lcd_init()
-        while True:
-            lcd_string("Hello, World!", LCD_LINE_1)
-            time.sleep(2)
-            lcd_string("Raspberry Pi", LCD_LINE_2)
-            time.sleep(2)
-
+        lcd_string(message_line_1, LCD_LINE_1)
+        lcd_string(message_line_2, LCD_LINE_2)
     except KeyboardInterrupt:
         pass
-
     finally:
         lcd_byte(0x01, LCD_CMD)
+
+if __name__ == '__main__':
+    # Example of how to call the function
+    update_lcd("Hello, World!", "Raspberry Pi")
