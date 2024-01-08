@@ -7,6 +7,9 @@ pcf8591_address = 0x48
 # Initialize the I2C bus
 bus = smbus.SMBus(1)
 
+# Add delay to stabilize I2C bus
+time.sleep(1)
+
 def read_analog(adc_channel):
     bus.write_byte(pcf8591_address, adc_channel)
     bus.read_byte(pcf8591_address)  # Dummy read to start conversion
