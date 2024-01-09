@@ -23,6 +23,9 @@ LCD_LINE_2 = 0xC0  # Line 2 address
 # Open I2C interface
 bus = smbus.SMBus(1)
 
+# Add delay to stabilize I2C bus
+time.sleep(1)
+
 def lcd_init():
     # Initialize the display
     lcd_byte(0x33, LCD_CMD)  # 110011 Initialize
