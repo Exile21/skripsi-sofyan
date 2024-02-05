@@ -11,7 +11,7 @@ from tensorflow.keras.utils import to_categorical
 import csv
 import pickle
 import time
-from lcd import update_lcd_line_2
+from lcd import update_lcd_line_2, update_lcd_line_1
 import threading  # Import the threading module
 import datetime
 
@@ -22,6 +22,10 @@ dht_pin = 18
 mq2 = mq2(analogPin=0)
 mq4 = mq4(analogPin=2)
 mq9 = mq9(analogPin=1)
+
+# Define temperature and humidity as global variables
+temperature = "N/A"
+humidity = "N/A"
 
 # Load the saved model
 saved_model = load_model("rbf_classification_model.h5", custom_objects={"RBFLayer": RBFLayer})
@@ -49,6 +53,8 @@ records = []
 # Define a function to continuously update the LCD without blocking
 def lcd_update_thread():
     while True:
+        # Update LCD line 1 with the temperature and humidity
+        update_lcd_line_1(f'Temp: {temperature}°C, Humidity: {humidity}%')
         # Update LCD line 2 with the predicted class
         update_lcd_line_2(predicted_class)
         time.sleep(2)  # Sleep for 2 seconds (if you want a delay)
