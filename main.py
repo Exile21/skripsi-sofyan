@@ -11,7 +11,7 @@ from tensorflow.keras.utils import to_categorical
 import csv
 import pickle
 import time
-from lcd import update_lcd_line_2
+from lcd import update_lcd_line_1
 import threading  # Import the threading module
 import datetime
 
@@ -50,7 +50,7 @@ records = []
 def lcd_update_thread():
     while True:
         # Update LCD line 2 with the predicted class
-        update_lcd_line_2(f'Predicted: {predicted_class}')
+        update_lcd_line_1(f'Class: {predicted_class}')
         time.sleep(2)  # Sleep for 2 seconds (if you want a delay)
 
 # Start the LCD update thread
